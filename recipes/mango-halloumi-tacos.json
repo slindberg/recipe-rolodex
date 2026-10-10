@@ -1,0 +1,66 @@
+{
+  "title": "Mango Halloumi Tacos",
+  "category": "Main",
+  "prepTime": "15 min",
+  "cookTime": "10 min",
+  "servings": "2-3",
+  "dietTags": [
+    "GF",
+    "Vegetarian"
+  ],
+  "ingredientGroups": [
+    {
+      "label": null,
+      "items": [
+        {
+          "name": "mango",
+          "amount": "1"
+        },
+        {
+          "name": "avocado",
+          "amount": "1"
+        },
+        {
+          "name": "cucumber",
+          "amount": "1"
+        },
+        {
+          "name": "lime",
+          "amount": "1"
+        },
+        {
+          "name": "fresh cilantro",
+          "amount": "1/2 bunch"
+        },
+        {
+          "name": "red onion",
+          "amount": "1/2"
+        },
+        {
+          "name": "salt & pepper",
+          "amount": "to taste"
+        },
+        {
+          "name": "halloumi",
+          "amount": "8-12oz"
+        },
+        {
+          "name": "GF tortillas",
+          "amount": "4-6"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    "Cut mango, avocado, cucumber, and red onion into small chunks — keep them small so the tacos are manageable.",
+    "Mix the chopped ingredients together with cilantro leaves, salt & pepper, and squeeze the lime juice over everything.",
+    "Cut the halloumi into quarter-inch slices and pan-fry until golden.",
+    "Heat the tortillas over an open flame if available.",
+    "Cover each tortilla with mango salad and top with 3–4 slices of fried halloumi."
+  ],
+  "notes": "Barely ripe avocados hold up best; soft ones turn the salsa to mush. Queso fresco works in place of the halloumi and is lower in saturated fat.",
+  "freezes": "no",
+  "freezeNote": "Neither half freezes: the mango salsa turns watery and the fried halloumi turns rubbery. Make what gets eaten.",
+  "sourceUrl": "https://www.instagram.com/reel/DCsOM-Ez0sb/",
+  "sourceDomain": "instagram.com"
+}

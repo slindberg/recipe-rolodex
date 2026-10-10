@@ -1,0 +1,77 @@
+{
+  "title": "Arugula, Apple + Date Salad",
+  "category": "Main",
+  "prepTime": null,
+  "cookTime": null,
+  "servings": "2",
+  "dietTags": [
+    "GF",
+    "Vegetarian"
+  ],
+  "ingredientGroups": [
+    {
+      "label": "Dressing",
+      "items": [
+        {
+          "name": "dates, chopped",
+          "amount": "to taste"
+        },
+        {
+          "name": "shallot, minced",
+          "amount": "to taste"
+        },
+        {
+          "name": "lemon juice",
+          "amount": "to taste"
+        },
+        {
+          "name": "parmesan, grated",
+          "amount": "to taste"
+        },
+        {
+          "name": "olive oil",
+          "amount": "to taste"
+        },
+        {
+          "name": "salt and black pepper",
+          "amount": "to taste"
+        }
+      ]
+    },
+    {
+      "label": "Salad",
+      "items": [
+        {
+          "name": "arugula, chopped",
+          "amount": "lots — the base"
+        },
+        {
+          "name": "green cabbage, shredded",
+          "amount": "a little"
+        },
+        {
+          "name": "apple, sliced",
+          "amount": "1 whole"
+        },
+        {
+          "name": "salted roasted pistachios, chopped",
+          "amount": "to taste"
+        },
+        {
+          "name": "parmesan, grated",
+          "amount": "more, to finish"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    "In a large bowl, toss the chopped dates, minced shallot, lemon juice, parmesan, olive oil, salt, and pepper together.",
+    "Add the arugula, cabbage, sliced apple, and chopped pistachios. Toss to coat.",
+    "Finish with more parmesan on top."
+  ],
+  "notes": "The core is shallot, lemon juice, and parmesan; keep those three and the rest flexes. Apple can be pear. Walnuts, hazelnuts, or pumpkin seeds work in place of the pistachios; salted and roasted are best. Arugula is the preferred base. Add cabbage or kale alongside it, or use them instead when there's no arugula (the original was mostly cabbage). The source gives no quantities. There's almost no protein in it, so serve it under something that has some, like the Crispy Sheet Pan Shredded Tofu Topping.",
+  "freezes": "no",
+  "freezeNote": "Raw arugula, cabbage, and apple don't freeze. Dress only what gets eaten.",
+  "sourceUrl": "https://www.instagram.com/p/DdzcTaASoAV/",
+  "sourceDomain": "instagram.com"
+}

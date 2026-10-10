@@ -1,0 +1,102 @@
+{
+  "title": "Mujadara — Lentils & Spiced Rice",
+  "category": "Main",
+  "prepTime": null,
+  "cookTime": "50 min",
+  "servings": "3",
+  "dietTags": [
+    "GF",
+    "Vegan"
+  ],
+  "ingredientGroups": [
+    {
+      "label": "For the lentils",
+      "items": [
+        {
+          "name": "Brown lentils, rinsed",
+          "amount": "¾ cup"
+        },
+        {
+          "name": "Garlic powder",
+          "amount": "½ tsp"
+        },
+        {
+          "name": "Onion powder",
+          "amount": "½ tsp"
+        },
+        {
+          "name": "Ground cumin",
+          "amount": "½ tsp"
+        },
+        {
+          "name": "7-spice (baharat)",
+          "amount": "½ tsp"
+        },
+        {
+          "name": "Cinnamon",
+          "amount": "pinch"
+        },
+        {
+          "name": "Water, for boiling",
+          "amount": "5 cups"
+        }
+      ]
+    },
+    {
+      "label": "For the rice & onions",
+      "items": [
+        {
+          "name": "Jasmine rice",
+          "amount": "1½ cups"
+        },
+        {
+          "name": "Ground cumin",
+          "amount": "1 tsp"
+        },
+        {
+          "name": "Ground coriander",
+          "amount": "1 tsp"
+        },
+        {
+          "name": "Salt",
+          "amount": "1 tsp"
+        },
+        {
+          "name": "7-spice (baharat)",
+          "amount": "1 tsp"
+        },
+        {
+          "name": "Cinnamon",
+          "amount": "dash"
+        },
+        {
+          "name": "Olive oil",
+          "amount": "4 tbsp"
+        },
+        {
+          "name": "Chicken or vegetable broth, hot (or hot water plus 2 tsp certified-GF bouillon powder)",
+          "amount": "3 cups"
+        },
+        {
+          "name": "Yellow onion, diced",
+          "amount": "1 small"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    "Rinse the rice and leave it to soak while the lentils cook.",
+    "Rinse the lentils and put them in a pot with the garlic powder, onion powder, ½ tsp cumin, ½ tsp 7-spice, and a pinch of cinnamon. Cover with the 5 cups of water.",
+    "Bring to a boil, then lower to a simmer and cook 20–25 minutes, until the lentils are just tender.",
+    "Drain the lentils, discarding the liquid, and set them aside.",
+    "In the same pot, warm the olive oil and cook the onion until golden.",
+    "Drain the rice and stir it into the onion with 1 tsp each of cumin, coriander, 7-spice, and salt, and a dash of cinnamon.",
+    "Add the lentils and the hot broth. Bring to a boil and let the liquid cook down to the level of the rice, then cover tightly with foil and the lid.",
+    "Turn the heat to low and cook 15–20 minutes, until the rice is tender. Serve topped with crispy onions, with salad or yogurt alongside."
+  ],
+  "notes": "Use brown or green lentils; red and yellow turn to mush. Take the lentils off the heat as soon as they're tender. For crispy onions, fry extra sliced onion separately until deep golden. Yogurt on the side adds protein. Tested as written, with 7-spice. No 7-spice? For each teaspoon, use ½ tsp cumin, ¼ tsp coriander, ⅛ tsp cardamom, and ⅛ tsp black pepper, plus a pinch of cinnamon if it tastes thin (untested).",
+  "freezes": "yes",
+  "freezeNote": "Freezes very well: lentils and rice, with no dairy or fresh vegetables. Freeze half as soon as it's cooked, and add the crispy onions and yogurt when serving.",
+  "sourceUrl": "https://falasteenifoodie.com/mujadara-lentils-and-spiced-rice",
+  "sourceDomain": "falasteenifoodie.com"
+}

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Recipe Rolodex</title>
+<meta name="description" content="A small, growing collection of home recipes, written for cooking from a phone.">
+<style>
+/* Single column, large type: a gallery of cards, then a full-screen cook view. Built for a phone propped by the stove. */
+:root {
+  color-scheme: light;
+  --bg:#FBF7F1; --surface:#FFFFFF; --ink:#2B2722; --muted:#857C71; --line:#E8E0D4;
+  --accent:#B5562A; --on-accent:#FFFFFF; --tag:#EFE7D9;
+  --display: Georgia, "Times New Roman", serif;
+  --body: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg:#1D1A17; --surface:#262220; --ink:#EDE6DC; --muted:#A69C90; --line:#3A3430;
+    --accent:#E08A5E; --on-accent:#1D1A17; --tag:#332D29;
+  }
+}
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font-family:var(--body);
+  font-size:16px; line-height:1.5; }
+.wrap { max-width:640px; margin:0 auto; padding:18px 16px 60px;
+  padding-top:calc(18px + env(safe-area-inset-top, 0px)); }
+[hidden] { display:none !important; }
+a { color:var(--accent); }
+
+h1 { font-family:var(--display); font-weight:400; font-size:1.7rem; margin:0 0 2px; }
+.sub { color:var(--muted); font-size:.85rem; margin:0 0 14px; }
+
+.bar { position:sticky; top:env(safe-area-inset-top, 0px); z-index:10; background:var(--bg);
+  padding:10px 0; border-bottom:1px solid var(--line); margin-bottom:14px; }
+input[type=search] { width:100%; font:inherit; font-size:1rem; padding:10px 12px;
+  border:1px solid var(--line); border-radius:8px; background:var(--surface); color:var(--ink); }
+input[type=search]:focus { outline:2px solid var(--accent); outline-offset:-1px; }
+.filters { display:flex; flex-wrap:wrap; gap:6px; margin-top:9px; }
+.f { font:inherit; font-size:.8rem; padding:5px 11px; border-radius:999px; cursor:pointer;
+  border:1px solid var(--line); background:var(--surface); color:var(--muted); }
+.f.on { background:var(--accent); border-color:var(--accent); color:var(--on-accent); }
+.count { font-size:.78rem; color:var(--muted); margin-top:8px; }
+
+/* gallery */
+.card { display:block; width:100%; text-align:left; font:inherit; cursor:pointer; color:inherit;
+  background:var(--surface); border:1px solid var(--line); border-radius:12px;
+  padding:14px 15px; margin-bottom:10px; text-decoration:none; }
+.card:hover { border-color:var(--muted); }
+.card:focus-visible, .back:focus-visible, .f:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+.card h2 { font-family:var(--display); font-weight:400; font-size:1.18rem; margin:0 0 6px; line-height:1.3; }
+.meta { font-size:.83rem; color:var(--muted); }
+.badges { display:flex; flex-wrap:wrap; gap:5px; margin-top:9px; }
+.b { font-size:.7rem; padding:2px 8px; border-radius:999px; border:1px solid var(--line);
+  color:var(--muted); letter-spacing:.02em; }
+.b.cat { border-color:var(--accent); color:var(--accent); }
+
+/* cook view */
+.back { font:inherit; font-size:.9rem; background:none; border:none; color:var(--accent);
+  cursor:pointer; padding:6px 0; margin-bottom:6px; }
+.detail h2 { font-family:var(--display); font-weight:400; font-size:1.6rem; margin:0 0 8px; line-height:1.25;
+  text-wrap:balance; }
+.dmeta { font-size:.88rem; color:var(--muted); margin-bottom:12px; }
+.sec { font-family:var(--display); font-size:.75rem; text-transform:uppercase; letter-spacing:.12em;
+  color:var(--accent); border-bottom:2px solid var(--accent); padding-bottom:5px; margin:26px 0 12px; }
+.grp { font-family:var(--display); font-style:italic; font-size:.85rem; color:var(--accent); margin:14px 0 6px; }
+.ing { display:flex; justify-content:space-between; gap:14px; padding:7px 0;
+  border-bottom:1px dotted var(--line); font-size:.98rem; }
+.ing .amt { color:var(--muted); font-weight:600; text-align:right; }
+ol.steps { list-style:none; padding:0; margin:0; counter-reset:s; }
+ol.steps li { counter-increment:s; position:relative; padding:0 0 18px 40px; font-size:1.02rem; line-height:1.55; }
+ol.steps li::before { content:counter(s); position:absolute; left:0; top:1px; width:26px; height:26px;
+  border-radius:50%; background:var(--accent); color:var(--on-accent); font-size:.8rem; font-weight:600;
+  display:flex; align-items:center; justify-content:center; }
+.note { background:var(--tag); border-left:3px solid var(--accent); border-radius:0 8px 8px 0;
+  padding:12px 14px; font-size:.92rem; margin-top:10px; }
+.src { margin-top:26px; padding-top:12px; border-top:1px solid var(--line); font-size:.85rem;
+  color:var(--muted); overflow-wrap:anywhere; }
+.empty { color:var(--muted); font-style:italic; padding:16px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div id="list">
+    <h1>Recipe Rolodex</h1>
+    <p class="sub">Home cooking, written for a phone by the stove. Tap a recipe to cook from it.</p>
+
+    <div class="bar">
+      <input type="search" id="q" placeholder="Search title or ingredient…" autocomplete="off" aria-label="Search recipes">
+      <div class="filters" id="filters"></div>
+      <div class="count" id="count">Loading recipes…</div>
+    </div>
+
+    <div id="cards"></div>
+  </div>
+
+  <div id="detail" class="detail" hidden></div>
+
+</div>
+
+<script>
+let RECIPES = [];
+const FILTERS = [
+  { id:"main",   label:"Mains",   test:r => r.category === "Main" },
+  { id:"side",   label:"Sides",   test:r => r.category === "Side" },
+  { id:"quick",  label:"≤30 min", test:r => mins(r) !== null && mins(r) <= 30 },
+  { id:"freeze", label:"Freezes", test:r => r.freezes === "yes" || r.freezes === "partial" },
+];
+const active = new Set();
+let wakeLock = null;
+
+function mins(r) {
+  let t = 0, found = false;
+  for (const v of [r.prepTime, r.cookTime]) {
+    const m = v && /(\d+)/.exec(v);
+    if (m) { t += +m[1]; found = true; }
+  }
+  return found ? t : null;
+}
+function timeLabel(r) {
+  const t = mins(r);
+  return t === null ? "time not given" : t + " min";
+}
+function proteinOf(r) {
+  const m = /~?(\d+)\s*g\b/.exec(r.notes || "");
+  return m ? "~" + m[1] + "g protein" : null;
+}
+function freezeLabel(r) {
+  return r.freezes === "yes" ? "freezes" : r.freezes === "partial" ? "freezes in part" : "doesn't freeze";
+}
+function el(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text != null) e.textContent = text;
+  return e;
+}
+function badges(r) {
+  const b = el("div", "badges");
+  b.append(el("span", "b cat", r.category), el("span", "b", freezeLabel(r)));
+  return b;
+}
+
+function matches(r) {
+  const q = document.getElementById("q").value.trim().toLowerCase();
+  if (q) {
+    const hay = (r.title + " " + JSON.stringify(r.ingredientGroups) + " " + (r.notes || "")).toLowerCase();
+    if (!hay.includes(q)) return false;
+  }
+  for (const id of active) {
+    const f = FILTERS.find(x => x.id === id);
+    if (f && !f.test(r)) return false;
+  }
+  return true;
+}
+
+function renderFilters() {
+  const box = document.getElementById("filters");
+  box.innerHTML = "";
+  for (const f of FILTERS) {
+    const b = el("button", "f" + (active.has(f.id) ? " on" : ""), f.label);
+    b.setAttribute("aria-pressed", active.has(f.id) ? "true" : "false");
+    b.onclick = () => { active.has(f.id) ? active.delete(f.id) : active.add(f.id); renderFilters(); renderList(); };
+    box.appendChild(b);
+  }
+}
+
+function renderList() {
+  const box = document.getElementById("cards");
+  box.innerHTML = "";
+  const hits = RECIPES.filter(matches);
+  document.getElementById("count").textContent = hits.length + " of " + RECIPES.length + " recipes";
+  if (!hits.length) { box.appendChild(el("p", "empty", "Nothing matches.")); return; }
+  for (const r of hits) {
+    const a = el("a", "card");
+    a.href = "#" + r.slug;
+    const p = proteinOf(r);
+    a.append(el("h2", null, r.title),
+      el("div", "meta", timeLabel(r) + (p ? " · " + p : "") + (r.servings ? " · serves " + r.servings : "")),
+      badges(r));
+    box.appendChild(a);
+  }
+}
+
+function renderRecipe(r) {
+  const d = document.getElementById("detail");
+  d.innerHTML = "";
+  const back = el("button", "back", "← All recipes");
+  back.onclick = () => { history.length > 1 && location.hash ? history.back() : (location.hash = ""); };
+  d.appendChild(back);
+  d.appendChild(el("h2", null, r.title));
+
+  const bits = [timeLabel(r)];
+  if (r.servings) bits.push("serves " + r.servings);
+  const p = proteinOf(r);
+  if (p) bits.push(p);
+  d.append(el("div", "dmeta", bits.join(" · ")), badges(r));
+  if (r.freezeNote) {
+    const n = el("div", "note");
+    n.append(el("b", null, "Freezing. "), document.createTextNode(r.freezeNote));
+    d.appendChild(n);
+  }
+
+  d.appendChild(el("div", "sec", "Ingredients"));
+  for (const g of r.ingredientGroups) {
+    if (g.label) d.appendChild(el("div", "grp", g.label));
+    for (const i of g.items) {
+      const row = el("div", "ing");
+      row.append(el("span", null, i.name), el("span", "amt", i.amount));
+      d.appendChild(row);
+    }
+  }
+
+  d.appendChild(el("div", "sec", "Method"));
+  const ol = el("ol", "steps");
+  for (const s of r.steps) ol.appendChild(el("li", null, s));
+  d.appendChild(ol);
+
+  if (r.notes) { d.appendChild(el("div", "sec", "Notes")); d.appendChild(el("div", "note", r.notes)); }
+
+  if (r.sourceUrl) {
+    const src = el("div", "src", "Adapted from ");
+    const a = el("a", null, r.sourceDomain || r.sourceUrl);
+    a.href = r.sourceUrl;
+    a.rel = "noopener";
+    src.appendChild(a);
+    d.appendChild(src);
+  }
+}
+
+async function keepAwake(on) {
+  try {
+    if (on && !wakeLock && navigator.wakeLock) {
+      wakeLock = await navigator.wakeLock.request("screen");
+      wakeLock.addEventListener("release", () => { wakeLock = null; });
+    } else if (!on && wakeLock) {
+      await wakeLock.release();
+    }
+  } catch (e) { /* not supported or refused; the page works without it */ }
+}
+
+function route() {
+  const slug = decodeURIComponent(location.hash.slice(1));
+  const r = slug && RECIPES.find(x => x.slug === slug);
+  document.getElementById("list").hidden = !!r;
+  document.getElementById("detail").hidden = !r;
+  if (r) {
+    renderRecipe(r);
+    document.title = r.title + " · Recipe Rolodex";
+    window.scrollTo(0, 0);
+  } else {
+    document.title = "Recipe Rolodex";
+  }
+  keepAwake(!!r);
+}
+
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible" && !document.getElementById("detail").hidden) keepAwake(true);
+});
+document.getElementById("q").oninput = renderList;
+window.addEventListener("hashchange", route);
+
+renderFilters();
+fetch("recipes.json")
+  .then(res => { if (!res.ok) throw new Error(res.status); return res.json(); })
+  .then(data => { RECIPES = data; renderList(); route(); })
+  .catch(() => { document.getElementById("count").textContent = "Couldn't load the recipes. Reload to try again."; });
+</script>
+</body>
+</html>
