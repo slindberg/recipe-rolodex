@@ -1,0 +1,90 @@
+{
+  "title": "Muesli",
+  "category": "Main",
+  "prepTime": "5 min",
+  "cookTime": "12 min",
+  "servings": "about 15",
+  "dietTags": [
+    "GF",
+    "Vegetarian"
+  ],
+  "ingredientGroups": [
+    {
+      "label": "Dry mix (about 15 servings)",
+      "items": [
+        {
+          "name": "rolled oats, certified GF",
+          "amount": "2 cups"
+        },
+        {
+          "name": "chia seeds",
+          "amount": "½ cup"
+        },
+        {
+          "name": "hemp seeds",
+          "amount": "½ cup"
+        },
+        {
+          "name": "pecans or walnuts, roughly chopped",
+          "amount": "1 cup"
+        },
+        {
+          "name": "dry-roasted pumpkin seeds",
+          "amount": "½ cup"
+        },
+        {
+          "name": "dried fruit, chopped if large: raisins, goji berries, dried apricots, Medjool dates, or prunes",
+          "amount": "½ cup"
+        },
+        {
+          "name": "GF edamame protein puffs (optional)",
+          "amount": "1½ cups"
+        },
+        {
+          "name": "salt",
+          "amount": "1 tbsp"
+        }
+      ]
+    },
+    {
+      "label": "Per bowl",
+      "items": [
+        {
+          "name": "dry mix, from above",
+          "amount": "⅓ cup"
+        },
+        {
+          "name": "2% milk",
+          "amount": "⅓–½ cup"
+        },
+        {
+          "name": "Greek yogurt",
+          "amount": "1 tbsp"
+        },
+        {
+          "name": "maple syrup or honey",
+          "amount": "up to 1 tbsp"
+        },
+        {
+          "name": "apple or pear, shredded",
+          "amount": "½ small"
+        },
+        {
+          "name": "lemon or lime, juiced",
+          "amount": "½ small"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    "Make the dry mix: In a large bowl, stir together the oats, chia seeds, hemp seeds, chopped nuts, pumpkin seeds, dried fruit, edamame puffs if using, and salt until the salt and seeds are spread evenly through. Store in an airtight jar.",
+    "Build a bowl: Shake or stir the jar first, since the small seeds and salt settle to the bottom. In a microwave-safe bowl, mix ⅓ cup of the dry mix with the milk, yogurt, sweetener, and shredded apple or pear.",
+    "Heat: Microwave for 1 minute 30 seconds, then take it out and stir in the lemon or lime juice.",
+    "Rest: Leave it 5–10 minutes so the chia seeds soak up the liquid and the bowl thickens. Use the higher end of the milk range for a looser texture."
+  ],
+  "notes": "About 11g protein per bowl: dry mix ~6g (mostly the hemp and pumpkin seeds), milk ~3–4g, yogurt ~1.5g. The edamame puffs add a little more, depending on the brand. ¼ cup Greek yogurt in place of the tablespoon adds about 4g. Pecans and walnuts are interchangeable, and any mix of the dried fruits works.",
+  "freezes": "partial",
+  "freezeNote": "The dry mix keeps freshest in the freezer, since the nuts and hemp seeds lose their freshness at room temperature; scoop it straight from frozen. A made-up bowl doesn't freeze, so mix one at a time.",
+  "sourceUrl": "https://www.instagram.com/p/DcIj0C8iea5/",
+  "sourceDomain": "instagram.com"
+}
