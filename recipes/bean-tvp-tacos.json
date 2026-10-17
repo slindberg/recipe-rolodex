@@ -1,0 +1,105 @@
+{
+  "title": "Bean + TVP Tacos",
+  "category": "Main",
+  "prepTime": "15 min",
+  "cookTime": "20 min",
+  "servings": "6–8 tacos",
+  "dietTags": [
+    "GF",
+    "Vegetarian"
+  ],
+  "ingredientGroups": [
+    {
+      "label": "Slaw",
+      "items": [
+        {
+          "name": "green cabbage, thinly sliced",
+          "amount": "¼ small"
+        },
+        {
+          "name": "carrot, thinly sliced",
+          "amount": "1 medium"
+        },
+        {
+          "name": "red onion, thinly sliced",
+          "amount": "¼"
+        },
+        {
+          "name": "lemon, juiced",
+          "amount": "1"
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "1 tsp"
+        },
+        {
+          "name": "salt and black pepper",
+          "amount": "to taste"
+        }
+      ]
+    },
+    {
+      "label": "TVP filling",
+      "items": [
+        {
+          "name": "TVP (textured vegetable protein), certified GF",
+          "amount": "1 cup"
+        },
+        {
+          "name": "water, divided",
+          "amount": "1½ cups"
+        },
+        {
+          "name": "sweet onion, diced",
+          "amount": "1 large"
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "2 tbsp"
+        },
+        {
+          "name": "GF taco seasoning",
+          "amount": "2 tbsp"
+        },
+        {
+          "name": "salt",
+          "amount": "2 tsp"
+        },
+        {
+          "name": "garlic, pressed",
+          "amount": "3 cloves"
+        }
+      ]
+    },
+    {
+      "label": "To assemble",
+      "items": [
+        {
+          "name": "vegetarian refried beans",
+          "amount": "1 can"
+        },
+        {
+          "name": "GF tortillas",
+          "amount": "6–8"
+        },
+        {
+          "name": "cheddar, shredded",
+          "amount": "1½ cups"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    "Rehydrate the TVP: Bring 1 cup of the water to a boil, pour it over the TVP in a bowl, stir, and leave it for 10 minutes.",
+    "Brown the onion: Cook the diced sweet onion in the 2 tbsp olive oil in a large skillet over medium heat until translucent and starting to brown.",
+    "Make the slaw: Put the sliced cabbage, carrot, and red onion in a bowl. Add the lemon juice, 1 tsp olive oil, salt, and pepper, and toss.",
+    "Season the filling: Add the rehydrated TVP, taco seasoning, garlic, and 2 tsp salt to the onion and stir to combine. Turn the heat to low, pour in the remaining ½ cup water, and cook until it's absorbed.",
+    "Warm the refried beans in a small saucepan or the microwave.",
+    "Assemble each taco: Heat a tortilla in a dry skillet until lightly browned. Spread a thin layer of refried beans over it, scatter cheddar on the beans, spoon the TVP filling over the cheese, and top with slaw. How much of each depends on the size of the tortillas."
+  ],
+  "notes": "About 32g protein per two tacos, from a batch of 8: TVP ~12g, cheddar ~10g, refried beans ~5g, tortillas ~4g, vegetables ~1g.",
+  "freezes": "partial",
+  "freezeNote": "The TVP filling freezes well, and so do any leftover refried beans; set the extra aside before assembling. The slaw and assembled tacos don't freeze, so make what gets eaten.",
+  "sourceUrl": null,
+  "sourceDomain": null
+}
