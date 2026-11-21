@@ -1,0 +1,59 @@
+{
+  "title": "Garlicky Lemon Kale",
+  "category": "Side",
+  "prepTime": "5 min",
+  "cookTime": "8 min",
+  "servings": "2",
+  "dietTags": [
+    "GF",
+    "Vegan",
+    "Vegetarian",
+    "DF"
+  ],
+  "ingredientGroups": [
+    {
+      "label": null,
+      "items": [
+        {
+          "name": "kale, stems removed",
+          "amount": "1 bunch (about 8 oz)"
+        },
+        {
+          "name": "garlic, thinly sliced",
+          "amount": "4 cloves"
+        },
+        {
+          "name": "lemon, zested and juiced",
+          "amount": "½"
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "2 tbsp"
+        },
+        {
+          "name": "water",
+          "amount": "2 tbsp"
+        },
+        {
+          "name": "red pepper flakes (optional)",
+          "amount": "up to ¼ tsp"
+        },
+        {
+          "name": "salt",
+          "amount": "to taste"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    "Strip the kale leaves off the stems and tear them into bite-size pieces. Rinse, and leave some water clinging to the leaves.",
+    "Put the garlic and olive oil in a large skillet while it's still cold, then set it over medium heat. Stir until the garlic turns pale gold at the edges, 2–3 minutes. Pull it before it browns, or it goes bitter.",
+    "Stir in the red pepper flakes, if using, then add the kale and the water. The pan will look overfull, but the kale collapses quickly. Toss with tongs for 4–5 minutes, until it's tender and bright green and the water has cooked off.",
+    "Off the heat, zest the lemon over the kale, squeeze in the juice, and season well with salt. Taste, and add more lemon if it seems flat."
+  ],
+  "notes": "Curly or lacinato kale both work. Chard works in place of the kale, as do collard greens given a few extra minutes in the pan. About 3g protein per serving, from the kale.",
+  "freezes": "no",
+  "freezeNote": "Quick enough to make fresh, in the amount that gets eaten.",
+  "sourceUrl": null,
+  "sourceDomain": null
+}
